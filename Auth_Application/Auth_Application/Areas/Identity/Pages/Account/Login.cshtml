@@ -1,0 +1,53 @@
+﻿@page
+
+@model LoginModel
+@{
+    ViewData["Title"] = "Вход";
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
+}
+
+
+<div class="input-groups">
+
+    <h1 class="form-title">@ViewData["Title"]</h1>
+    <h4 class="form-title-sub">Вписване във вашия акаунт.</h4>
+    <hr />
+
+    <form id="account" method="post">
+        <div class="form-group">
+            <input asp-for="Input.UserName" class="input" placeholder="Потребителско име" />
+            <span asp-validation-for="Input.UserName" class="text-warning-custom"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="Input.Password" class="input" placeholder="Парола" />
+            <span asp-validation-for="Input.Password" class="text-warning-custom"></span>
+        </div>
+
+        <div class="form-group remember-checkbox">
+            <div class="checkbox ">
+                <label asp-for="Input.RememberMe">
+                    <input asp-for="Input.RememberMe" />
+                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <button type="submit" class="login-form-btn">Вход</button>
+        </div>
+
+        <div class="form-group form-login-links">
+            <p>
+                <a id="forgot-password" class="links" asp-page="./ForgotPassword">Забравена парола?</a>
+            </p>
+            <p>
+                <a class="links" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Регистриране на нов потребител</a>
+            </p>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

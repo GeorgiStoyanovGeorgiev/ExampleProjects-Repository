@@ -1,0 +1,27 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "Лични данни";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<h4 class="mng-title-center mng-title">@ViewData["Title"]</h4>
+
+<div class="mng-input-groups">
+    <div class="col-md-6">
+        <p class="mng-title-sub">Акаунтът ви съдържа лични данни, които сте ни предоставили. Тази страница ви позволява да изтеглите или изтриете тези данни.</p>
+        <p class="mng-title-sub">
+            <strong>Изтриването на тези данни ще премахне окончателно вашият акаунт и няма да бъде възстановен.</strong>
+        </p>
+        <form id="download-data" asp-page="DownloadPersonalData" method="post" class="form-group">
+            <button class="mng-form-btn" type="submit">Изтегляне</button>
+        </form>
+        <p>
+            <a id="delete" asp-page="DeletePersonalData" class="mng-form-delbtn">Изтриване</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

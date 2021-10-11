@@ -1,0 +1,119 @@
+﻿
+/*--------COMMONS---------*/
+
+.mng-box {
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.mng-form-box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.mng-input-groups {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+}
+/*-----------INPUT---------------*/
+.mng-input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+    .mng-input:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(23, 139, 139, 0.35);
+    }
+
+/*-----------NAVBAR BUTTONS-------------*/
+
+.mng-nav-btn .nav-link.active,
+.mng-nav-btn .show > .nav-link {
+    background: radial-gradient(circle, rgba(23,148,148,1) 0%, rgba(17,0,0,1) 100%);
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.mng-nav-btn li a:hover {
+    color: #e6e6e6;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+/*------------INPUT BUTTONS---------------*/
+
+.mng-form-btn {
+    background: radial-gradient(circle, rgba(23,148,148,1) 0%, rgba(17,0,0,1) 100%);
+    border-radius: 30px;
+    color: rgb(222, 222, 222);
+    letter-spacing: 0.5px;
+    padding: 8px 30px;
+    border: none;
+}
+
+    .mng-form-btn:hover {
+        color: #bfbfbf;
+    }
+
+.mng-form-delbtn {
+    background: rgb(115, 115, 115);
+    border-radius: 30px;
+    color: rgb(0,0,0);
+    letter-spacing: 0.5px;
+    padding: 8px 30px;
+}
+
+    .mng-form-delbtn:hover {
+        text-decoration: none;
+        color: gainsboro;
+    }
+/*----------------MISC-------------------*/
+
+.btn-link,
+.btn-link:hover {
+    color: #5ec5c5;
+}
+
+.mng-title-center {
+    text-align: center;
+}
+
+.mng-title {
+    color: #e6e6e6;
+}
+
+.mng-title-sub {
+    color: #bfbfbf;
+}
+
+
+
+@media only screen and (max-width: 420px) {
+    .mng-title {
+        font-size: 20px;
+    }
+
+    .mng-title-sub {
+        font-size: 16px;
+    }
+}

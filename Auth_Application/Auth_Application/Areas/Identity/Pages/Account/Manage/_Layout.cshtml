@@ -1,0 +1,38 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+
+
+<div class="mng-box ">
+   
+
+    <h2 class="mng-title-center mng-title">Управление на акаунт</h2>
+    <h4 class="mng-title-center mng-title-sub">Промяна на настройките на акаунта</h4>
+    <hr />
+    <div class="mng-form-box">
+        <div class="navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow mb-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">    
+                <partial name="_ManageNav" />
+            </div>
+            
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

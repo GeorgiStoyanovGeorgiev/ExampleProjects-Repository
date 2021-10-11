@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Microsoft.AspNetCore.Identity
+@using Auth_Application.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<section>
+    <nav class="main-navbar">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <ul class="navbar-nav tn-btn-area-logged">
+                <li class="tn-btn">
+                    <a id="manage" class="tn-acc-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Акаунт</a>
+                </li>
+                <li class="nav-item">
+                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button id="logout" type="submit" class="tn-logout-btn">Изход</button>
+                    </form>
+                </li>
+            </ul>
+        }
+        else
+        {
+            <ul class="navbar-nav tn-btn-area">
+                <li class="tn-btn">
+                    <a class="tn-reg-btn" id="register" asp-area="Identity" asp-page="/Account/Register">Регистрация</a>
+                </li>
+                <li class="tn-btn">
+                    <a class="tn-log-btn" id="login" asp-area="Identity" asp-page="/Account/Login">Вписване</a>
+                </li>
+            </ul>
+        }
+
+    </nav>
+</section>
+<div class="text-center">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h1 class="logged-index-title" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+            Добре дошъл @UserManager.GetUserName(User) !
+        </h1>
+    }
+    else
+    {
+        <h1 class="display-4 index-title">Добре дошъл !</h1>
+    }
+</div>
+<!--TODO: ДА СИ НАПРАВЯ ЛОГИН ПЕЙДЖА ИНДЕКСЕН-->

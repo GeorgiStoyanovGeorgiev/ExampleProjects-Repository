@@ -1,0 +1,346 @@
+﻿hr {
+    border-color: rgb(118, 118, 118);
+}
+
+.form-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #e6e6e6;
+}
+
+.form-title-sub {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #bfbfbf;
+}
+
+.form-login-links p {
+    text-align: center;
+}
+
+.form-login-links p a{
+    color: #878787;
+}
+
+.text-warning-custom {
+    color: #ff3300;
+    font-size: 14px;
+}
+
+.logged-index-title,
+.index-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 400;
+}
+/*-------------ACTIVE FORM SWITCH--------------*/
+.form-switch-active {
+    background: rgb(23,148,148);
+    background: radial-gradient(circle, rgba(23,148,148,1) 0%, rgba(17,0,0,0.5) 100%);
+    color: #f2f2f2;
+}
+
+.form-switch-btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 19px;
+}
+
+    .form-switch-btn:hover {
+        color: #e6e6e6;
+        text-decoration: none;
+    }
+
+.form-switch-log-btn {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.form-switch-reg-btn {
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+ul li a {
+    color: darkgray;
+}
+
+/*--------FORM BUTTONS---------*/
+.login-form-btn,
+.reg-form-btn {
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    background: rgb(23,148,148);
+    background: radial-gradient(circle, rgba(23,148,148,1) 0%, rgba(17,0,0,0.5) 100%);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(222, 222, 222);
+    letter-spacing:0.5px;
+}
+
+.login-form-btn {
+    padding: 10px 40px;
+}
+
+    .login-form-btn:focus {
+        outline: none;
+    }
+
+.reg-form-btn {
+    padding: 10px 30px;
+}
+
+.reg-form-btn:focus {
+    outline: none;
+}
+
+/*-------------------TOP NAVIGATION BUTTONS--------------------*/
+main-navbar{
+    width: 100%;
+}
+
+.tn-reg-btn {
+    background: rgb(74,74,74);
+    background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
+    padding: 10px 25px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: white;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.tn-log-btn {
+    background: rgb(74,74,74);
+    background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
+    padding: 10px 35px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.tn-logout-btn {
+    background: rgb(74,74,74);
+    background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
+    padding: 3px 34px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    margin-top: 17px;
+}
+
+    .tn-logout-btn:hover {
+        color: lightgray;
+    }
+
+    .tn-logout-btn:focus {
+        outline: none;
+    }
+
+.tn-acc-btn {
+    background: rgb(74,74,74);
+    background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
+    padding: 5px 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+    .tn-acc-btn:hover {
+        text-decoration: none;
+        color: lightgray;
+    }
+
+.tn-btn a:hover {
+    text-decoration: none;
+    color: lightgray;
+}
+
+li.tn-btn {
+    margin-top: 20px;    
+}
+
+.tn-btn-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tn-btn-area-logged {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+/*------------INPUT AREAS--------------*/
+.input-username {
+}
+
+.input-password {
+    margin-top: 15px;
+}
+
+.input-email {
+}
+
+.input-confirm-email {
+}
+
+.input {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+    .input:focus {
+        box-shadow: 0 0.2rem 0 0 rgba(23, 139, 139, 0.25);
+    }
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+::-ms-reveal {
+    filter: invert(100%);
+}
+/*-----------COMMON--------------*/
+
+.form-box {
+    width: 380px;
+    height: 650px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top:40px;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.input-groups {
+    
+    position: absolute;
+    width: 280px;
+    left:49%;
+    transform: translate(-50%);
+}
+
+/*-------------MISC---------------*/
+
+.remember-checkbox {
+    color: #d3d3d3;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #a1a1a1;
+    opacity: 1; 
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #a1a1a1;
+}
+
+
+/*---------MEDIA-RESPONSE----------*/
+
+@media only screen and (max-width:1400px) {
+    .form-box {
+        width: 350px;
+        height:600px;
+    }
+    .input-groups {
+        width: 280px;
+    }
+    .form-title {  
+        font-size: 24px;
+    }
+    .form-title-sub {
+        font-size: 16px;
+    }
+    .input {
+        font-size: 14px;
+    }
+    .remember-checkbox{
+        font-size: 14px;
+    }
+    .login-form-btn,
+    .reg-form-btn{
+        font-size: 15px;
+    }
+    .form-switch-log-btn,
+    .form-switch-reg-btn{
+        font-size: 17px;
+    }
+    .links {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .form-box,
+    .input-groups {
+        width: 80%
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .form-switch-log-btn,
+    .form-switch-reg-btn {
+        font-size: 15px;
+    }
+
+    .form-title {
+        font-size: 28px;
+    }
+
+    .form-title-sub {
+        font-size: 15px;
+    }
+
+    .reg-form-btn {
+        font-size: 13px;
+    }
+
+    .login-form-btn {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .tn-btn-area {  
+        flex-direction: column;
+    }
+    .tn-reg-btn{
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+
