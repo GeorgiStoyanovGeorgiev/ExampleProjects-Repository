@@ -114,8 +114,7 @@ main-navbar{
     background: rgb(74,74,74);
     background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
     padding: 10px 25px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-radius: 30px;
     color: white;
     text-align: center;
     margin-right: 10px;
@@ -125,8 +124,7 @@ main-navbar{
     background: rgb(74,74,74);
     background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
     padding: 10px 35px;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 30px;
     color: white;
     text-align: center;
     margin-left: 10px;
@@ -135,20 +133,15 @@ main-navbar{
 .tn-logout-btn {
     background: rgb(74,74,74);
     background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
-    padding: 3px 34px;
+    padding: 5px 33px;
     border-radius: 10px;
     color: white;
     text-align: center;
-    border: none;
-    margin-top: 17px;
 }
 
     .tn-logout-btn:hover {
         color: lightgray;
-    }
-
-    .tn-logout-btn:focus {
-        outline: none;
+        text-decoration: none;
     }
 
 .tn-acc-btn {
@@ -246,6 +239,18 @@ input:-webkit-autofill:focus {
     transform: translate(-50%);
 }
 
+/*------------LOGOUT PAGE---------------*/
+
+.logout-pg-wrapper{
+    display:flex;
+    flex-direction:column;
+}
+
+.logout-pg-btn {
+    margin: 10px auto;
+    background: radial-gradient(circle, rgba(74,74,74,1) 0%, rgba(31,186,186,1) 100%);
+    border-radius: 30px;
+}
 /*-------------MISC---------------*/
 
 .remember-checkbox {
@@ -261,6 +266,7 @@ input:-webkit-autofill:focus {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #a1a1a1;
 }
+
 
 
 /*---------MEDIA-RESPONSE----------*/
@@ -312,8 +318,10 @@ input:-webkit-autofill:focus {
         font-size: 15px;
     }
 
+    .logged-index-title,
+    .index-title,
     .form-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .form-title-sub {
@@ -329,14 +337,20 @@ input:-webkit-autofill:focus {
     }
 }
 
-@media only screen and (max-width: 300px){
-    .tn-btn-area {  
-        flex-direction: column;
-    }
-    .tn-reg-btn{
-        margin-left: 10px;
-    }
+@media only screen and (max-width: 362px) {
+
+    
 }
+
+    @media only screen and (max-width: 300px) {
+        .tn-btn-area {
+            flex-direction: column;
+        }
+
+        .tn-reg-btn {
+            margin-left: 10px;
+        }
+    }
 
 
 
