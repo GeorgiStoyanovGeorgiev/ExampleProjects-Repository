@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Auth_Application.ViewModels.Home.IndexViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 @using Microsoft.AspNetCore.Identity
@@ -41,7 +42,7 @@
     @if (SignInManager.IsSignedIn(User))
     {
         <h1 class="logged-index-title" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-            Добре дошъл @UserManager.GetUserName(User) !
+            Добре дошъл, @Model.UserName !
         </h1>
     }
     else

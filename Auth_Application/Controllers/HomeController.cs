@@ -1,4 +1,6 @@
 ﻿using Auth_Application.Models;
+using Auth_Application.ViewModels.Home;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -16,11 +18,16 @@ namespace Auth_Application.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            
         }
 
         public IActionResult Index()
         {
-            return View();
+            var viewModel = new IndexViewModel
+            { 
+                UserName = User.Identity.Name            
+            };
+           return View(viewModel);
         }
 
         public IActionResult Privacy()
