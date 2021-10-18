@@ -63,11 +63,11 @@ body {
     font-family: "Roboto", sans-serif;
     background: url(../images/background1.jpg);
     background-repeat: no-repeat;
-    background-size: initial;
+    background-size: cover;
     background-position: center;
     min-height: 100%;
-    box-shadow: inset 0 0 0 2000px rgb(0, 0, 0, 0.4);
-}
+/*    box-shadow: inset 0 0 0 2000px rgb(0, 0, 0, 0.4);
+*/}
 
 .footer {
     position: absolute;
@@ -76,3 +76,20 @@ body {
     line-height: 40px; /* Vertically center the text there */
 }
 
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+@media only screen and (max-height: 700px) {
+    body {
+        background-size: initial;
+    }
+}

@@ -2,27 +2,23 @@
     Layout = "/Views/Shared/_Layout.cshtml";
 }
 
-@*<div class="form-wrapper">
-    <div class="col-md-6 offset-md-3">*@
 <section>
     <article class="form-box">
         <div class="log-form-head card-header">
             <ul class="nav nav-tabs card-header-tabs form-nav">
                 <li class="nav-item w-50">
-                    <a class=" w-auto text-center form-switch-btn form-switch-log-btn" href='/Account/Login'>
+                    <a class=" w-auto text-center form-switch-btn form-switch-log-btn" href='/Home/Login'>
                         Вписване
                     </a>
                 </li>
                 <li class="nav-item w-50">
-                    <a class="w-auto text-center form-switch-btn form-switch-reg-btn" href='/Account/Register'>
+                    <a class="w-auto text-center form-switch-btn form-switch-reg-btn" href='/Home/Register'>
                         Регистрация
                     </a>
                 </li>
             </ul>
         </div>
-
         @RenderBody()
-
     </article>
 </section>
 

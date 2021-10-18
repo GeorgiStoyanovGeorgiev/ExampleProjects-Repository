@@ -1,4 +1,5 @@
-﻿@model Auth_Application.ViewModels.Home.IndexViewModel
+﻿@using Auth_Application.ViewModels.Home
+@model IndexViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -8,45 +9,20 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-<section>
-    <nav class="main-navbar">
+
+<partial name="_IndexNavBar" />
+
+@section IndexTitle{
+    <div class="text-center">
         @if (SignInManager.IsSignedIn(User))
         {
-            <ul class="navbar-nav tn-btn-area-logged">
-                <li class="tn-btn">
-                    <a id="manage" class="tn-acc-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-                        Акаунт
-                    </a>
-                </li>
-                <li class="tn-btn">
-                    <a id="logoutForm" class="tn-logout-btn" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                        Изход
-                    </a>
-                </li>
-            </ul>
+            <h1 class="logged-index-title" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                Добре дошъл, @Model.UserName !
+            </h1>
         }
         else
         {
-            <ul class="navbar-nav tn-btn-area">
-                <li class="tn-btn">
-                    <a class="tn-reg-btn" id="register" asp-area="Identity" asp-page="/Account/Register">Регистрация</a>
-                </li>
-                <li class="tn-btn">
-                    <a class="tn-log-btn" id="login" asp-area="Identity" asp-page="/Account/Login">Вписване</a>
-                </li>
-            </ul>
+            <h1 class="display-4 index-title">Добре дошъл !</h1>
         }
-    </nav>
-</section>
-<div class="text-center">
-    @if (SignInManager.IsSignedIn(User))
-    {
-        <h1 class="logged-index-title" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-            Добре дошъл, @Model.UserName !
-        </h1>
-    }
-    else
-    {
-        <h1 class="display-4 index-title">Добре дошъл !</h1>
-    }
-</div>
+    </div>
+}

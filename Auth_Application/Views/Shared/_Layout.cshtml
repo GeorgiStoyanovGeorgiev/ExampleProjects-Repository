@@ -14,8 +14,11 @@
 
 </head>
 <body>
+    <div class="overlay"></div>
+
     <main role="main" class="pb-3">
         @RenderBody()
+        @RenderSection("IndexTitle", false)
     </main>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

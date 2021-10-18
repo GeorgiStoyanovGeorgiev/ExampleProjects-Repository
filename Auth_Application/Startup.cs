@@ -29,27 +29,33 @@ namespace Auth_Application
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddMvc().AddRazorPagesOptions(options => {
-                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "/Account/Login");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "/Home/Login");
+            });
             services.AddMvc().AddRazorPagesOptions(options => {
-                options.Conventions.AddAreaPageRoute("Identity", "/Account/Register", "/Account/Register");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Register", "/Home/Register");
+            });
+            services.AddMvc().AddRazorPagesOptions(options => {
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Logout", "/Home/Registrationconfirm");
+            });
             services.AddMvc().AddRazorPagesOptions(options => {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/Index", "/Account/Manage");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            });
             services.AddMvc().AddRazorPagesOptions(options => {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/Email", "/Account/Manage/Email");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            });
             services.AddMvc().AddRazorPagesOptions(options => {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/ChangePassword", "/Account/Manage/Password");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            });
             services.AddMvc().AddRazorPagesOptions(options => {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/PersonalData", "/Account/Manage/PersonalData");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            });
             services.AddMvc().AddRazorPagesOptions(options => {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/ForgotPassword", "/Account/ForgotPassword");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-
+            });
+            services.AddMvc().AddRazorPagesOptions(options => {
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Logout", "/Account/Logout");
+            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
